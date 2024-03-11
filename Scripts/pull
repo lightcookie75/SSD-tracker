@@ -1,0 +1,11 @@
+#!/bin/bash
+
+M5STACK_IP="10.1.0.40"
+USER_FILE_NAME="USERID.txt"
+TAG_FILE_NAME="TAGID.txt"
+LOGS_FILE_NAME="LOGS.txt"
+
+# Download file from M5Stack and replace existing file
+curl -sSf "http://$M5STACK_IP/PULL_USERS" > "$HOME/$USER_FILE_NAME"
+curl -sSf "http://$M5STACK_IP/PULL_TAGS" > "$HOME/$TAG_FILE_NAME"
+curl -sSf "http://$M5STACK_IP/PULL_LOGS" > "$HOME/$LOGS_FILE_NAME"

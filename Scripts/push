@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# IP address of the M5Stack Basic device
+M5STACK_IP="10.1.0.40"
+
+# Path to the files to be transferred
+USERID_FILE="USERID.txt"
+TAGID_FILE="TAGID.txt"
+
+# Transfer files to M5Stack Basic
+curl -F "file1=@$USERID_FILE" -F "file2=@$TAGID_FILE" http://$M5STACK_IP/upload
